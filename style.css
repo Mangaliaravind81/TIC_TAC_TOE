@@ -3,15 +3,16 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif ;
     user-select: none;
-    color: white;
+    color: rgb(16, 15, 15);
 }
 main{
-    background-color: #0a0519;
+    background-color: #ffffff ;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 #header{
     /* border: solid; */
@@ -19,6 +20,7 @@ main{
     width: 235px;
     justify-content:space-between ;
     margin-bottom: 30px ;
+   
 }
 #header.player{
     background-color: #17122A;
@@ -37,6 +39,7 @@ transition: 0.3s;
 }
 #header.player:hover{
     border: solid 4px #2A2343;
+   
 
 }
 .player-active{
@@ -73,7 +76,7 @@ border: solid 4px #2A2343;
     gap: 12px;
 }
 .cell{
-    background: #17122A;
+    background: #d9d9d9a3;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -82,16 +85,22 @@ border: solid 4px #2A2343;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s background;
+    color: aliceblue;
 
+
+}
+.cell:hover{
+    background: #cbcbcb;
 }
 #board.cell:hover{
     background: #2A2343;
+    /* color: rgb(37, 38, 39); */
 
 }
 #butt{
     margin-top: 30px;
     width: 235px;
-    background:#17122A ;
+  
     padding: 8px;
     border: none;
     border-radius: 12px;
@@ -99,7 +108,9 @@ border: solid 4px #2A2343;
     transition: 0.3s background;
     font-size: 16px;
     font-weight: 600;
+     background:rgb(228, 227, 227)
 }
 #butt:hover{
-    background-color: #2A2343 ;     
+    background-color: #cbcbcb ;     
+    color:rgb(0, 0, 0);
 }

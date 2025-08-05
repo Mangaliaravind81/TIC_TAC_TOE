@@ -8,14 +8,14 @@ let currentPlayer = 'X';
 let board = Array(9).fill(null);
 let gameActive = true;
 
-// All winning combinations
+
 const winningCombos = [
-  [0,1,2], [3,4,5], [6,7,8], // rows
-  [0,3,6], [1,4,7], [2,5,8], // columns
-  [0,4,8], [2,4,6]           // diagonals
+  [0,1,2], [3,4,5], [6,7,8], 
+  [0,3,6], [1,4,7], [2,5,8], 
+  [0,4,8], [2,4,6]           
 ];
 
-// Highlight the current player in UI
+
 function updatePlayerUI() {
   xPlayer.classList.remove('player-active');
   oPlayer.classList.remove('player-active');
@@ -26,7 +26,7 @@ function updatePlayerUI() {
   }
 }
 
-// Handle a single cell click
+
 function handleClick(e) {
   const index = Array.from(cells).indexOf(e.target);
   if (!gameActive || board[index]) return;
@@ -34,7 +34,7 @@ function handleClick(e) {
   board[index] = currentPlayer;
   e.target.textContent = currentPlayer;
 
-  // Add color based on current player
+  
   if (currentPlayer === 'X') {
     e.target.style.color = '#1892EA';
   } else {
@@ -57,7 +57,7 @@ function handleClick(e) {
   updatePlayerUI();
 }
 
-// Check for winner
+
 function checkWinner() {
   return winningCombos.some(combo => {
     return combo.every(i => board[i] === currentPlayer);
@@ -69,7 +69,7 @@ function restartGame() {
   board.fill(null);
   cells.forEach(cell => {
     cell.textContent = '';
-    cell.style.color = ''; // Clear previous colors
+    cell.style.color = '';
   });
   currentPlayer = 'X';
   gameActive = true;
@@ -77,7 +77,6 @@ function restartGame() {
   updatePlayerUI();
 }
 
-// Handle player change and reset board
 xPlayer.addEventListener('click', () => {
   if (currentPlayer !== 'X') {
     currentPlayer = 'X';
@@ -92,9 +91,9 @@ oPlayer.addEventListener('click', () => {
   }
 });
 
-// Attach event listeners
+
 cells.forEach(cell => cell.addEventListener('click', handleClick));
 restartButton.addEventListener('click', restartGame);
 
-// Initialize UI
+
 updatePlayerUI();
