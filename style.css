@@ -37,8 +37,9 @@ border: solid 4px #17122A;
 opacity: 0,5;
 transition: 0.3s;
 }
-#header.player:hover{
+.player:hover{
     border: solid 4px #2A2343;
+    opacity: 1;
    
 
 }
@@ -92,11 +93,11 @@ border: solid 4px #2A2343;
 .cell:hover{
     background: #cbcbcb;
 }
-#board.cell:hover{
-    background: #2A2343;
-    /* color: rgb(37, 38, 39); */
-
+.cell:active{
+    background: #cbcbcb;
 }
+
+
 #butt{
     margin-top: 30px;
     width: 235px;
@@ -111,6 +112,10 @@ border: solid 4px #2A2343;
      background:rgb(228, 227, 227)
 }
 #butt:hover{
+    background-color: #cbcbcb ;     
+    color:rgb(0, 0, 0);
+}
+#butt:active{
     background-color: #cbcbcb ;     
     color:rgb(0, 0, 0);
 }
