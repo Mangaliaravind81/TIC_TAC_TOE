@@ -1,121 +1,128 @@
-*{
-    margin:0;
-    box-sizing: border-box;
-    font-family: 'poppins',sans-serif ;
-    user-select: none;
-    color: rgb(16, 15, 15);
-}
-main{
-    background-color: #ffffff ;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-#header{
-    /* border: solid; */
-    display: flex;
-    width: 235px;
-    justify-content:space-between ;
-    margin-bottom: 30px ;
-   
-}
-#header.player{
-    background-color: #17122A;
-    width: 80px;
-height: 80px;
-display: flex;
-align-items: center;
-justify-content:center;
-font-size: 30px;
-font-weight: bold;
-cursor: pointer;
-border-radius: 12px;
-border: solid 4px #17122A;
-opacity: 0,5;
-transition: 0.3s;
-}
-.player:hover{
-    border: solid 4px #2A2343;
-    opacity: 1;
-   
-
-}
-.player-active{
-opacity: 1;    
-border: solid 4px #2A2343;
-}
-#header #xplayer{
-    color: #1892EA;
-     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s background;
-
-}
-#header #oplayer{
-    color: #A737FF;
-     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s background;
-}
-#board{
-    display: grid;
-    grid-template-columns: repeat(3, 70px);
-    grid-template-rows: repeat(3, 70px);
-    gap: 12px;
-}
-.cell{
-    background: #d9d9d9a3;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s background;
-    color: aliceblue;
-
-
-}
-.cell:hover{
-    background: #cbcbcb;
-}
-.cell:active{
-    background: #cbcbcb;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  user-select: none;
+  color: rgb(16, 15, 15);
 }
 
+main {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-#butt{
-    margin-top: 30px;
-    width: 235px;
-  
-    padding: 8px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.3s background;
-    font-size: 16px;
-    font-weight: 600;
-     background:rgb(228, 227, 227)
+#header {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
-#butt:hover{
-    background-color: #cbcbcb ;     
-    color:rgb(0, 0, 0);
+
+#header.player {
+  background-color: #17122A;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  border: solid 4px #17122A;
+  opacity: 0.5;
+  transition: 0.3s;
 }
-#butt:active{
-    background-color: #cbcbcb ;     
-    color:rgb(0, 0, 0);
+
+.player:hover {
+  border: solid 4px #2A2343;
+  opacity: 1;
+}
+
+.player-active {
+  opacity: 1;
+  border: solid 4px #2A2343;
+}
+
+#header #xplayer {
+  color: #1892EA;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s background;
+}
+
+#header #oplayer {
+  color: #A737FF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s background;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 12px;
+}
+
+.cell {
+  background: #d9d9d9a3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s background;
+  color: aliceblue;
+}
+
+.cell:hover {
+  background: #cbcbcb;
+}
+
+.cell:active {
+  background: #cbcbcb;
+}
+
+#butt {
+  margin-top: 30px;
+  width: 235px;
+  padding: 8px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s background;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgb(228, 227, 227);
+}
+
+/* ✅ FIXED: Hover only on desktop */
+@media (hover: hover) and (pointer: fine) {
+  #butt:hover {
+    background-color: #cbcbcb;
+    color: rgb(0, 0, 0);
+  }
+}
+
+/* ✅ FIXED: Tap effect for mobile */
+#butt:active {
+  background-color: #cbcbcb;
+  color: rgb(0, 0, 0);
 }
